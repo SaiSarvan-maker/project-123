@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India's Top 10 Highest Grossing Movies</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Typography */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding-bottom: 50px;
+        }
+
+        /* Headings with different colors and alignments */
+        h1 {
+            color: #e63946;
+            text-align: center;
+            margin: 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h2 {
+            color: #1d3557;
+            border-bottom: 2px solid #457b9d;
+            padding-bottom: 10px;
+            margin: 25px 0 15px;
+        }
+
+        h3 {
+            color: #457b9d;
+            margin: 20px 0 10px;
+        }
+
+        h4 {
+            color: #1d3557;
+            margin: 15px 0 8px;
+        }
+
+        h5 {
+            color: #e63946;
+            margin: 12px 0 6px;
+        }
+
+        h6 {
+            color: #6c757d;
+            margin: 10px 0 5px;
+            font-style: italic;
+        }
+
+        /* Text formatting */
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-justify {
+            text-align: justify;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            background-color: #ffd166;
+            padding: 0 4px;
+        }
+
+        /* Text colors */
+        .text-primary {
+            color: #1d3557;
+        }
+
+        .text-secondary {
+            color: #6c757d;
+        }
+
+        .text-success {
+            color: #2a9d8f;
+        }
+
+        .text-danger {
+            color: #e63946;
+        }
+
+        .text-warning {
+            color: #e9c46a;
+        }
+
+        .text-info {
+            color: #457b9d;
+        }
+
+        /* Container and Layout */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #1d3557;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #457b9d;
+            color: #ffd166;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        ol li {
+            margin-bottom: 10px;
+        }
+
+        dl {
+            margin: 15px 0;
+        }
+
+        dt {
+            font-weight: bold;
+            color: #1d3557;
+            margin-top: 10px;
+        }
+
+        dd {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #1d3557;
+            color: white;
+            position: sticky;
+            top: 60px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        tr:hover {
+            background-color: #e9ecef;
+            transition: background-color 0.3s;
+        }
+
+        /* Forms */
+        form {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: #1d3557;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #457b9d;
+        }
+
+        /* Images */
+        .movie-poster {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 10px;
+        }
+
+        .movie-poster:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Positioning */
+        .relative-box {
+            position: relative;
+            height: 200px;
+            background-color: #e9ecef;
+            border: 2px dashed #6c757d;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: #e63946;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        .fixed-box {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #2a9d8f;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .animated-item {
+            animation: slideIn 1s ease-out;
+        }
+
+        /* Transitions */
+        .transition-box {
+            width: 100px;
+            height: 100px;
+            background-color: #457b9d;
+            margin: 20px 0;
+            border-radius: 8px;
+            transition: all 0.5s ease;
+        }
+
+        .transition-box:hover {
+            width: 200px;
+            background-color: #e63946;
+            transform: rotate(10deg);
+        }
+
+        /* Div and Span */
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .highlight-text {
+            background-color: #ffd166;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        /* Padding and Margin */
+        .p-1 { padding: 10px; }
+        .p-2 { padding: 20px; }
+        .p-3 { padding: 30px; }
+        .m-1 { margin: 10px; }
+        .m-2 { margin: 20px; }
+        .m-3 { margin: 30px; }
+
+        .pt-1 { padding-top: 10px; }
+        .pb-1 { padding-bottom: 10px; }
+        .pl-1 { padding-left: 10px; }
+        .pr-1 { padding-right: 10px; }
+
+        .mt-1 { margin-top: 10px; }
+        .mb-1 { margin-bottom: 10px; }
+        .ml-1 { margin-left: 10px; }
+        .mr-1 { margin-right: 10px; }
+
+        /* Footer */
+        footer {
+            background-color: #1d3557;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 5px 0;
+            }
+            
+            .container {
+                width: 95%;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#top-movies">Top Movies</a></li>
+            <li><a href="#movie-table">Movie Table</a></li>
+            <li><a href="#industry-facts">Industry Facts</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Headings -->
+        <h1>India's Top 10 Highest Grossing Movies</h1>
+        <h2>Bollywood Box Office Blockbusters</h2>
+        <h3>An Overview of Indian Cinema Success</h3>
+        <h4>Regional Cinema Contributions</h4>
+        <h5>Factors Behind Box Office Success</h5>
+        <h6>Data as of 2023</h6>
+
+        <!-- Text with different alignments and formatting -->
+        <div class="card animated-item">
+            <p class="text-justify">Indian cinema, often referred to as Bollywood (though it includes many regional film industries), has produced numerous blockbuster movies that have shattered box office records. These films represent the <span class="highlight-text">diversity and richness</span> of Indian storytelling, combining spectacular visuals, memorable music, and compelling narratives.</p>
+            
+            <p class="text-left"><span class="bold">Note:</span> The following list represents the highest-grossing Indian films worldwide, adjusted for inflation where possible.</p>
+            
+            <p class="text-center">From epic historical dramas to social commentaries and action thrillers, Indian cinema continues to captivate audiences globally.</p>
+            
+            <p class="text-right">- Compiled by Cinema Analysis Group</p>
+        </div>
+
+        <!-- Ordered List -->
+        <div id="top-movies" class="card animated-item">
+            <h2>Top 10 Highest Grossing Indian Movies</h2>
+            <ol>
+                <li><span class="bold text-primary">Dangal</span> (2016) - ₹2,024 crore</li>
+                <li><span class="bold text-primary">Baahubali 2: The Conclusion</span> (2017) - ₹1,810 crore</li>
+                <li><span class="bold text-primary">Pushpa 2</span> (2024) - ₹1,642 crore</li>
+                <li><span class="bold text-primary">RRR</span> (2022) - ₹1,300 crore+</li>
+                <li><span class="bold text-primary">KGF: Chapter 2</span> (2022) - ₹1,250 crore</li>
+                <li><span class="bold text-primary">Jawan</span> (2023) - ₹1,148 crore</li>
+                <li><span class="bold text-primary">Pathaan</span> (2023) - ₹1,050 crore</li>
+                <li><span class="bold text-primary">Kalki 2898 AD</span> (2024) - ₹1,042 crore</li>
+                <li><span class="bold text-primary">Animal</span> (2023) - ₹917 crore</li>
+                <li><span class="bold text-primary">Bajrangi Bhaijaan</span> (2015) - ₹905 crore</li>
+            </ol>
+        </div>
+
+        <!-- Unordered List -->
+        <div class="card animated-item">
+            <h3>Common Elements in Successful Indian Films</h3>
+            <ul>
+                <li>Star power with popular actors</li>
+                <li>Memorable music and dance sequences</li>
+                <li>Emotional storytelling that resonates with family audiences</li>
+                <li>High production values and visual effects</li>
+                <li>Effective marketing campaigns</li>
+                <li>Release during holiday seasons</li>
+            </ul>
+        </div>
+
+        <!-- Definition List -->
+        <div class="card animated-item">
+            <h3>Key Terms in Indian Cinema</h3>
+            <dl>
+                <dt>Bollywood</dt>
+                <dd>The Hindi-language film industry based in Mumbai</dd>
+                
+                <dt>Tollywood</dt>
+                <dd>Refers to both the Telugu and Tamil film industries</dd>
+                
+                <dt>Box Office</dt>
+                <dd>The commercial performance of a film in terms of ticket sales</dd>
+                
+                <dt>Crore</dt>
+                <dd>A unit in the Indian numbering system equal to ten million (10,000,000)</dd>
+            </dl>
+        </div>
+
+        <!-- Table -->
+        <div id="movie-table" class="card animated-item">
+            <h2>Detailed Movie Information</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Movie Title</th>
+                        <th>Year</th>
+                        <th>Director</th>
+                        <th>Lead Actors</th>
+                        <th>Worldwide Gross (in ₹ crore)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Dangal</td>
+                        <td>2016</td>
+                        <td>Nitesh Tiwari</td>
+                        <td>Aamir Khan, Sakshi Tanwar</td>
+                        <td class="text-success bold">2,024</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Baahubali 2: The Conclusion</td>
+                        <td>2017</td>
+                        <td>S.S. Rajamouli</td>
+                        <td>Prabhas, Rana Daggubati</td>
+                        <td class="text-success bold">1,810</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Pushpa 2</td>
+                        <td>2024</td>
+                        <td>Sukumar</td>
+                        <td>Allu Arjun,Fahadh Fassil</td>
+                        <td class="text-success bold">1,642</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>RRR</td>
+                        <td>2022</td>
+                        <td>S.S. Rajamouli</td>
+                        <td>N. T, Rama Rao,Ram Charan</td>
+                        <td class="text-success bold">1,300+</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>K.G.F: Chapter2</td>
+                        <td>2022</td>
+                        <td>Prasanth Neel</td>
+                        <td>Yash,Sanjay Dutt</td>
+                        <td class="text-info bold">1,200+</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Forms -->
+        <div id="contact" class="card animated-item">
+            <h2>Share Your Favorite Indian Movie</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="movie">Favorite Indian Movie:</label>
+                    <input type="text" id="movie" name="movie" placeholder="Enter movie title">
+                </div>
+                
+                <div class="form-group">
+                    <label for="year">Release Year:</label>
+                    <input type="number" id="year" name="year" min="1950" max="2023" placeholder="Year">
+                </div>
+                
+                <div class="form-group">
+                    <label for="reason">Why is it your favorite?</label>
+                    <textarea id="reason" name="reason" placeholder="Share your thoughts..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="industry">Which film industry does it belong to?</label>
+                    <select id="industry" name="industry">
+                        <option value="">Select an industry</option>
+                        <option value="bollywood">Bollywood (Hindi)</option>
+                        <option value="tollywood">Tollywood (Telugu)</option>
+                        <option value="kollywood">Kollywood (Tamil)</option>
+                        <option value="sandalwood">Sandalwood (Kannada)</option>
+                        <option value="mollywood">Mollywood (Malayalam)</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <input type="submit" value="Submit Your Choice">
+            </form>
+        </div>
+
+        <!-- Positioning Examples -->
+        <div class="card animated-item">
+            <h2>CSS Positioning Examples</h2>
+            
+            <h3>Relative and Absolute Positioning</h3>
+            <div class="relative-box">
+                This div has relative positioning
+                <div class="absolute-box">Absolute</div>
+            </div>
+            
+            <h3>Transition Example</h3>
+            <div class="transition-box">Hover over me!</div>
+        </div>
+
+        <!-- Images and Anchors -->
+        <div id="industry-facts" class="card animated-item">
+            <h2>Indian Cinema Industry Facts</h2>
+            
+            <div class="text-center">
+                <h4>Sample Movie Posters</h4>
+                <!-- Note: These are placeholder images since we can't use actual movie posters -->
+                <img src="https://via.placeholder.com/300x450/1d3557/ffffff?text=Dangal" alt="Dangal Movie Poster" class="movie-poster">
+                <img src="https://via.placeholder.com/300x450/457b9d/ffffff?text=Baahubali+2" alt="Baahubali 2 Movie Poster" class="movie-poster">
+                <img src="https://via.placeholder.com/300x450/e63946/ffffff?text=RRR" alt="RRR Movie Poster" class="movie-poster">
+            </div>
+            
+            <p class="mt-2">For more information about Indian cinema, visit these resources:</p>
+            <ul>
+                <li><a href="https://www.imdb.com/list/ls062154366/" target="_blank">IMDb: Highest Grossing Indian Movies</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/List_of_highest-grossing_Indian_films" target="_blank">Wikipedia: Highest Grossing Indian Films</a></li>
+                <li><a href="https://www.boxofficeindia.com/" target="_blank">Box Office India</a></li>
+            </ul>
+        </div>
+
+        <!-- Fixed Element -->
+        <div class="fixed-box">
+            <a href="#top" style="color: white; text-decoration: none;">Back to Top</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Indian Cinema Enthusiasts | All data is for educational purposes</p>
+    </footer>
+</body>
+</html>
